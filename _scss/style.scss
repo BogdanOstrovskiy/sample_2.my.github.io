@@ -1,0 +1,18 @@
+@import "_fonts";
+@import "_vars";
+@import "_normalize";
+
+a {
+	text-decoration: none;
+}
+
+body {
+	background: #f0ede4 url('../images/bg.png') repeat;
+	min-width: $min-width;
+	@media all and (max-width: 800px) {
+		min-width: ($min-width)-200px;
+	}
+}
+
+@import "_wrapper";
+@import "_jquery.bxslider";

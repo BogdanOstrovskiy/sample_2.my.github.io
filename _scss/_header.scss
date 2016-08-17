@@ -1,0 +1,135 @@
+.ul-reset {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.btn-green-style {
+	background: $bg-gradient;
+	border: 1px solid $border-green;
+	color: $nav-menu;
+	text-shadow: $text-nav-shadow-set;
+	box-shadow: $bg-shadow-set;	
+}
+.btn-green-style-aside {
+	@extend .btn-green-style;
+	box-shadow: 0 0 0 3px $aside-btn-shadow-color, $bg-shadow-set;
+	font-family: $KlavikaMediumPlain;
+	border-radius: 4px;
+	text-transform: uppercase;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.clearfix::after {
+	content: '';
+	clear: both;
+	display: table;
+}
+.wrapper {
+	max-width: $wrap-max-width;
+	margin: 0 auto;
+}
+
+.header {
+	margin: 18px 0 11px;
+	&-info {
+		&-logo {
+			float: left;
+			margin-left: 26px;
+			a {
+				height: 100%;
+				width: 100%;
+				img {
+					height: 100%;
+					width: auto;
+				}
+			}
+		}
+		&-contact {
+			float: right;
+			&-tel {
+				span, a {
+					display: block;
+					text-align: right;
+					font-family: $myriad-pro;
+				}
+				span {
+					color: $text-header;
+					font-size: 12px;
+				}
+				a {
+					color: $link-tel;
+					font-size: 20px;
+				}
+			}
+			&-menu {
+				ul {
+					@extend .ul-reset;
+					margin-top: 20px;
+					li {
+						display: inline-block;
+						margin-left: 15px;
+						a {
+							color: $link-info-menu;
+							text-transform: uppercase;
+							font: {
+								family: $ZurichCondensedBt;
+								size: 13px;
+								}
+							&:hover {
+								border-bottom: 1px solid $link-info-menu;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&-nav {
+		margin: 29px 0 15px;
+	 	ul { 
+			@extend .ul-reset;
+			width: 100%;
+			background: $bg-gradient;
+			border: 1px solid $border-green;
+			box-shadow: $bg-shadow-set;
+			border-radius: 4px;
+			width: auto;
+			height: 40px;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-around;
+			li {
+				width: auto;
+				height: auto;
+				display: flex;
+				align-self: center;
+				a {
+					text-shadow: $text-nav-shadow-set;
+					color: $nav-menu;
+					border-bottom: 1px solid transparent;
+					position: relative;
+					top: 1px;
+					font: {
+						family: $ZurichCondensedBt;
+						weight: bold;
+						size: 15px;
+					}
+					&:hover {
+						border-bottom: 1px solid $text-nav-shadow;
+					}
+				}
+			}
+	 	}
+	}
+	.index-page {
+		margin: 0 22px;
+		color: $index-page;
+		line-height: 20px;
+		text-shadow: 1px 1px 0 #fff;
+		font: {
+			family: $Arial;
+			size: 12px;
+		}
+	}
+}

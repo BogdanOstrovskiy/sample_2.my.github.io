@@ -1,0 +1,16 @@
+.main {
+	width: 100%;
+	height: auto;
+	&-wrap{
+		background-color: $main-bg;
+		border-radius: 4px;
+		display: flex;
+		flex-flow: row nowrap;
+		align-content: flex-start;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+
+	@import "_content";
+	@import "_aside";
+}

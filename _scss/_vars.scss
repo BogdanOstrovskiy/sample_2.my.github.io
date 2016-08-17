@@ -1,0 +1,57 @@
+// fonts
+$myriad-pro: 'MyriadProRegular', Arial, sans-serif;
+$ZurichCondensedBt: 'ZurichCondensedBt', Arial, sans-serif;
+$Arial: Arial, sans-serif;
+$KlavikaMediumPlain: 'KlavikaMediumPlain', Arial, sans-serif;
+
+// colors
+
+$text-header: #585755;
+$link-tel: #373737;
+$link-info-menu: #209a28;
+$nav-menu: #fff;
+$border-green: #0c932f;
+$text-nav-shadow: #1c7c1f;
+$index-page: #14961c;
+$main-bg: #fff;
+$slider-info-text: #fff;
+$slider-green-text: #28b028;
+$bg-slider-points: #6b685e;
+$bg-slider-text: rgba(37, 29, 20, 0.9);
+$bg-shadow-color: #81de41;
+$content-text-1: #444137;
+$content-text-2: #595447;
+$border-menu-tab: #cfcdc5;
+$border-img-tab: #e9e6df;
+$color-text-tab-block: #3a3731;
+$color-aside-text: #3f3b30;
+$bg-aside: #f4f2ec;
+$form-text-normal: #999999;
+$form-text-active: #231f20;
+$aside-btn-shadow-color: #d8d5cc;
+$bg-footer: #f4f2ec;
+$border-footer-head: #635543;
+$footer-head-text-color: #fff;
+$footer-head-shadow-text-color: #000;
+$footer-block-border: #d8d6ce;
+$footer-block-shadow: #faf9f7;
+$fooer-content-head-text: #64522a;
+$fooer-content-text: #757268; 
+$footer-copyright-text: #716c61;
+
+// other
+$min-width: 1000px;
+$wrap-max-width: 990px;
+$main-content-width: 705px;
+$main-aside-width: 248px;
+$btn-searh-widht: 184px;
+$bg-gradient: linear-gradient(to top, #0c932f, #66c13e);
+$bg-shadow-set: inset 1px 1px 0 $bg-shadow-color;
+$bg-form-gradient: linear-gradient(to top, #f4f3f1, #fff);
+$bg-footer-head-gradient: linear-gradient(to top, #6e675e, #999387);
+$text-nav-shadow-set: 0 -2px 1px $text-nav-shadow;
+$text-footer-head-shadow-set: 1px 1px 1px $footer-head-shadow-text-color;
+
+// bg
+
+$sprite: url('../images/sprite.png') no-repeat

@@ -1,0 +1,11 @@
+.wrapper {
+	display: flex;
+	flex-flow: column nowrap;
+	min-height: 100vh;
+}
+main {
+	flex-grow: 1;
+}
+@import "_header";
+@import "_main";
+@import "_footer";

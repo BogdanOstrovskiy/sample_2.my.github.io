@@ -1,0 +1,244 @@
+.aside {
+	@mixin form-style-holidays {
+		height: 24px;
+		border: 1px solid $border-menu-tab;
+		border-radius: 3px;
+		box-shadow: 0 0 0 3px $border-img-tab;
+		color: $form-text-normal;
+		font: {
+			size: 11px;
+		}
+		line-height: 24px;
+		outline: none;
+		background: $bg-form-gradient;
+	}
+	@mixin form-style-all {
+		@include form-style-holidays;
+		padding: 0 8px;
+		color: $form-text-active;
+	}
+	* {
+		box-sizing: border-box;
+	}
+		box-sizing: border-box;
+		max-width: $main-aside-width;
+		background-color: $bg-aside;
+		margin: 1px 1px 1px 0;
+		border-radius: 0 4px 4px 0;
+		padding: 0 24px 20px;
+		color: $color-aside-text;
+	.aside-head {
+		font: {
+			family: $myriad-pro;
+			size: 14px;
+			weight: normal;
+		}
+		text-transform: uppercase;
+		margin: 21px 0 12px;
+	}
+	.aside-motive-text {
+		display: block;
+		font: {
+			family: $Arial;
+			size: 12px;
+		}
+		margin-bottom: 15px;
+	}
+	.form-holiday {
+		.jq-selectbox {
+			@include form-style-holidays;
+			cursor: pointer;
+			position: relative;
+			margin-bottom: 19px;
+			width: 100%;
+			.jq-selectbox__select-text {
+				padding: 0 25px 0 8px;
+			}
+			ul {
+				padding: 8px;
+				margin: 8px 0;
+				background: $bg-form-gradient;
+				border: 1px solid $border-menu-tab;
+				border-radius: 3px;
+				box-shadow: 0 0 0 3px $border-img-tab;
+			}
+			&:hover, &:active {
+				color: $form-text-active;
+				&::before {
+					background: $sprite center;
+					background-position: -2px -20px;
+				}
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				height: 19px;
+				width: 21px;
+				top: 2px;
+				right: 2px;
+				background: $sprite center;
+				background-size: auto;
+				background-position: -2px -41px;
+			}
+		}
+		.button-search {
+			width: 100%;
+			cursor: pointer;
+			position: relative;
+			line-height: 38px;
+			height: 37px;
+			border: none;
+			outline: none;
+			background-color: transparent;
+			color: $nav-menu;
+			margin: 0;
+			padding: 0;
+			text: {
+				align: left;
+				transform: uppercase;
+				shadow: $text-nav-shadow-set; 
+			} 
+			font: {
+				family: $KlavikaMediumPlain;
+				size: 15px;
+			}
+			svg {
+				.st0 {
+					stroke: #D9D6CD;
+					stroke-width: 3; 
+					stroke-miterlimit:10;
+				}
+				.st1 {
+					
+					stroke: $border-green;
+					stroke-miterlimit: 10;
+					box-shadow: 0 0 0 3px $aside-btn-shadow-color;
+				}
+				.grad-style-1 {
+					stop: {
+						color: #66c13e;
+						opacity: 1;
+					}
+				}
+				.grad-style-2 {
+					stop: {
+						color: #0c932f;
+						opacity: 1;
+					}
+				}
+			}
+			&:active {
+				.grad-style-1 {
+					stop: {
+						color: (#66c13e)+10;
+						opacity: 1;
+					}
+				}
+				.grad-style-2 {
+					stop: {
+						color: (#0c932f)+10;
+						opacity: 1;
+					}
+				}
+			}
+			span {
+				position: absolute;
+				width: auto;
+				height: auto;
+				top: 0;
+				bottom: 0;
+				margin: auto 0;
+				left: 15px;
+				&::after {
+					content: '';
+					position: absolute;
+					width: 15px;
+					height: 15px;
+					top: 0;
+					bottom: 0;
+					right: -32px;
+					margin: auto 0;
+					background: $sprite center;
+					background-position: -2px -62px;
+				}
+			}
+		}
+	}
+	.form-country {
+		max-width: 100%;
+		height: auto;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-content: flex-start;
+		input {
+			max-width: 100%;
+			height: auto;
+			display: flex;
+			&[type="text"] {
+				@include form-style-all;
+				margin-right: 10px;
+				flex-grow: 1;	
+			}
+			&[type="button"] { 
+				@extend .btn-green-style-aside;
+				&:active {
+					background: linear-gradient(to top, (#0c932f)+10, (#66c13e)+10);
+				}	
+			}
+		}	
+	}
+	.form-registration {
+		input[type="email"] {
+			@include form-style-all;
+			margin-bottom: 13px;
+			min-width: 100%;
+			
+		}
+		&-name {
+			min-width: 100%;
+			height: auto;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			align-content: flex-start;
+			input {
+				&[type="button"] {
+					@extend .btn-green-style-aside;
+					&:active {
+						background: linear-gradient(to top, (#0c932f)+10, (#66c13e)+10);
+					}	
+				}
+				&[type="text"]	{
+					@include form-style-all;
+					margin-right: 10px;
+					flex-grow: 1;
+				}
+			}
+		}
+	}
+	.aside-news {
+		.news-block {
+			margin-bottom: 25px;
+			display: block;
+			width: 100%;
+			height: auto;
+			font: {
+				family: $Arial;
+				size: 12px;
+			}
+			line-height: 18px;
+			color: $color-aside-text;
+			&:hover, &:active {
+				color: ($color-aside-text) + 50;
+			}
+			h4, p {
+				margin: 0;
+				display: block;
+			}
+			span {
+				font-weight: bold;
+			}
+		}
+	}
+}
